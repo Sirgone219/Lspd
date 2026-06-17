@@ -1,7 +1,4 @@
-// CAMBIA QUESTO CON IL TUO WEBHOOK DISCORD
 const WEBHOOK_URL = "INSERISCI_WEBHOOK_DISCORD";
-
-// CAMBIA QUESTA PASSWORD STAFF
 const STAFF_PASSWORD = "lspd123";
 
 const applyForm = document.getElementById("applyForm");
@@ -39,7 +36,7 @@ applyForm.addEventListener("submit", async function (e) {
     embeds: [
       {
         title: "🚔 Nuova candidatura Los Santos PD",
-        color: 3447003,
+        color: 13398,
         fields: [
           { name: "👤 Nome IC", value: nomeIC || "Non inserito", inline: true },
           { name: "💬 Discord", value: discord || "Non inserito", inline: true },
@@ -58,7 +55,7 @@ applyForm.addEventListener("submit", async function (e) {
   };
 
   try {
-    formStatus.style.color = "#60a5fa";
+    formStatus.style.color = "#f8f9fa";
     formStatus.innerText = "Invio candidatura in corso...";
 
     const res = await fetch(WEBHOOK_URL, {
