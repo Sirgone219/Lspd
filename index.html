@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD - Bandi di Selezione</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="hero">
+    <div class="overlay"></div>
+
+    <nav>
+        <h2>LSPD</h2>
+        <a href="#candidatura">Candidati</a>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Los Santos Police Department</h1>
+        <p>Bandi ufficiali di selezione per nuovi agenti</p>
+        <a href="#candidatura" class="btn">Compila candidatura</a>
+    </div>
+</header>
+
+<section class="info">
+    <h2>Requisiti</h2>
+    <div class="cards">
+        <div class="card">Età minima OOC: 16+</div>
+        <div class="card">Buona conoscenza del Roleplay</div>
+        <div class="card">Microfono funzionante</div>
+        <div class="card">Serietà e disponibilità</div>
+    </div>
+</section>
+
+<section id="candidatura" class="form-section">
+    <h2>Modulo Candidatura LSPD</h2>
+
+    <form id="applyForm">
+        <input type="text" id="nome" placeholder="Nome e cognome IC" required>
+        <input type="text" id="discord" placeholder="Discord es. Thomas#0001" required>
+        <input type="number" id="eta" placeholder="Età OOC" required>
+        <input type="text" id="ore" placeholder="Ore disponibili al giorno" required>
+
+        <textarea id="esperienza" placeholder="Hai esperienza in RP o in polizia?" required></textarea>
+        <textarea id="motivo" placeholder="Perché vuoi entrare in LSPD?" required></textarea>
+        <textarea id="punti" placeholder="Punti di forza e debolezza" required></textarea>
+
+        <button type="submit">Invia candidatura</button>
+    </form>
+
+    <p id="status"></p>
+</section>
+
+<footer>
+    <p>© LSPD Roleplay Department - Server RP</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
