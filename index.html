@@ -10,6 +10,8 @@
 
 <header class="hero">
   <div class="hero-bg"></div>
+  <div class="hero-dark"></div>
+
   <nav>
     <div class="logo">LOS SANTOS <span>PD</span></div>
     <div class="nav-links">
@@ -20,27 +22,77 @@
   </nav>
 
   <div class="hero-content">
-    <p class="badge">OFFICIAL RECRUITMENT PORTAL</p>
-    <h1>Los Santos Police Department</h1>
-    <p class="subtitle">Servire, proteggere e mantenere l’ordine a Los Santos.</p>
-    <a href="#candidatura" class="main-btn">Invia candidatura</a>
+    <p class="badge">LOS SANTOS POLICE DEPARTMENT</p>
+    <h1>Recruitment Division</h1>
+    <p class="subtitle">
+      Entra nel dipartimento, proteggi la città e costruisci la tua carriera nelle forze dell’ordine.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#candidatura" class="main-btn">Invia candidatura</a>
+      <a href="#bandi" class="second-btn">Visualizza bandi</a>
+    </div>
+  </div>
+
+  <div class="hero-panel">
+    <h3>Stato reclutamento</h3>
+    <p>Cadetti, agenti e unità operative</p>
+    <span>SELEZIONI ATTIVE</span>
   </div>
 </header>
 
-<section id="bandi" class="section">
-  <h2>Bandi di selezione</h2>
-  <div class="bando-card">
-    <h3>Reclutamento Agenti LSPD</h3>
-    <p id="bandoStatus" class="status open">BANDO APERTO</p>
-    <p>
-      Il Los Santos Police Department apre le selezioni per nuovi cadetti.
-      Compila il modulo e attendi risposta dallo staff.
+<section id="bandi" class="section bandi-section">
+  <div class="section-header">
+    <p>RECRUITMENT BOARD</p>
+    <h2>Bandi di selezione</h2>
+    <span>Consulta i bandi attivi del Los Santos Police Department.</span>
+  </div>
+
+  <div class="bando-modern">
+    <div class="bando-top">
+      <div>
+        <p class="bando-label">BANDO UFFICIALE</p>
+        <h3>Cadet Program - Los Santos PD</h3>
+      </div>
+
+      <p id="bandoStatus" class="status open">BANDO APERTO</p>
+    </div>
+
+    <p class="bando-desc">
+      Il dipartimento apre le selezioni per nuovi cadetti. I candidati selezionati
+      verranno contattati dallo staff per colloquio, prova teorica e prova pratica in RP.
     </p>
+
+    <div class="bando-info-grid">
+      <div>
+        <strong>Ruolo</strong>
+        <span>Cadetto LSPD</span>
+      </div>
+      <div>
+        <strong>Colloquio</strong>
+        <span>Obbligatorio</span>
+      </div>
+      <div>
+        <strong>Esito</strong>
+        <span>Via Discord</span>
+      </div>
+      <div>
+        <strong>Stato</strong>
+        <span>Recruitment</span>
+      </div>
+    </div>
+
+    <a href="#candidatura" class="bando-btn">Candidati ora</a>
   </div>
 </section>
 
 <section class="section requirements">
-  <h2>Requisiti</h2>
+  <div class="section-header">
+    <p>REQUIREMENTS</p>
+    <h2>Requisiti</h2>
+    <span>Requisiti minimi richiesti per partecipare al bando.</span>
+  </div>
+
   <div class="grid">
     <div class="box">Età OOC minima consigliata: 16+</div>
     <div class="box">Microfono funzionante</div>
@@ -50,7 +102,11 @@
 </section>
 
 <section id="candidatura" class="section form-section">
-  <h2>Modulo candidatura</h2>
+  <div class="section-header">
+    <p>APPLICATION FORM</p>
+    <h2>Modulo candidatura</h2>
+    <span>Compila tutti i campi e attendi risposta dallo staff.</span>
+  </div>
 
   <form id="applyForm">
     <input id="nomeIC" type="text" placeholder="Nome e cognome IC" required />
