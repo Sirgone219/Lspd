@@ -17,7 +17,7 @@
     <div class="nav-links">
       <a href="#bandi">Bandi</a>
       <a href="#candidatura">Candidati</a>
-      <button onclick="openStaff()">Staff</button>
+      <button class="nav-btn" onclick="openStaff()">Staff</button>
     </div>
   </nav>
 
@@ -32,12 +32,6 @@
       <a href="#candidatura" class="main-btn">Invia candidatura</a>
       <a href="#bandi" class="second-btn">Visualizza bandi</a>
     </div>
-  </div>
-
-  <div class="hero-panel">
-    <h3>Stato reclutamento</h3>
-    <p>Cadetti, agenti e unità operative</p>
-    <span>SELEZIONI ATTIVE</span>
   </div>
 </header>
 
@@ -54,21 +48,6 @@
   </div>
 </section>
 
-<section class="section requirements">
-  <div class="section-header">
-    <p>REQUIREMENTS</p>
-    <h2>Requisiti</h2>
-    <span>Requisiti minimi richiesti per partecipare al bando.</span>
-  </div>
-
-  <div class="grid">
-    <div class="box">Età OOC minima consigliata: 16+</div>
-    <div class="box">Microfono funzionante</div>
-    <div class="box">Serietà in RP</div>
-    <div class="box">Buona disponibilità settimanale</div>
-  </div>
-</section>
-
 <section id="candidatura" class="section form-section">
   <div class="section-header">
     <p>APPLICATION FORM</p>
@@ -76,7 +55,7 @@
     <span>Compila tutti i campi e attendi risposta dallo staff.</span>
   </div>
 
-  <form id="applyForm">
+  <form id="applyForm" class="animated-form">
     <input id="nomeIC" type="text" placeholder="Nome e cognome IC" required />
     <input id="discord" type="text" placeholder="Discord" required />
     <input id="eta" type="number" placeholder="Età OOC" required />
