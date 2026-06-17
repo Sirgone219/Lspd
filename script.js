@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "INSERISCI_WEBHOOK_DISCORD";
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1516842643198316676/1NfKW6TSVj6jt5qdTmW9rv-IWhSWxk-6f55HWxDb5It4P7RK0RM3Nb6dM0QiYSVmjsMY";
 const STAFF_PASSWORD = "lspd123";
 
 const applyForm = document.getElementById("applyForm");
