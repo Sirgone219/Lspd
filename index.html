@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSPD - Bandi di Selezione</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Santos PD - Recruitment</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="hero">
-    <div class="overlay"></div>
-
-    <nav>
-        <h2>LSPD</h2>
-        <a href="#candidatura">Candidati</a>
-    </nav>
-
-    <div class="hero-content">
-        <h1>Los Santos Police Department</h1>
-        <p>Bandi ufficiali di selezione per nuovi agenti</p>
-        <a href="#candidatura" class="btn">Compila candidatura</a>
+  <div class="hero-bg"></div>
+  <nav>
+    <div class="logo">LOS SANTOS <span>PD</span></div>
+    <div class="nav-links">
+      <a href="#bandi">Bandi</a>
+      <a href="#candidatura">Candidati</a>
+      <button onclick="openStaff()">Staff</button>
     </div>
+  </nav>
+
+  <div class="hero-content">
+    <p class="badge">OFFICIAL RECRUITMENT PORTAL</p>
+    <h1>Los Santos Police Department</h1>
+    <p class="subtitle">Servire, proteggere e mantenere l’ordine a Los Santos.</p>
+    <a href="#candidatura" class="main-btn">Invia candidatura</a>
+  </div>
 </header>
 
-<section class="info">
-    <h2>Requisiti</h2>
-    <div class="cards">
-        <div class="card">Età minima OOC: 16+</div>
-        <div class="card">Buona conoscenza del Roleplay</div>
-        <div class="card">Microfono funzionante</div>
-        <div class="card">Serietà e disponibilità</div>
+<section id="bandi" class="section">
+  <h2>Bandi di selezione</h2>
+  <div class="bando-card">
+    <h3>Reclutamento Agenti LSPD</h3>
+    <p id="bandoStatus" class="status open">BANDO APERTO</p>
+    <p>
+      Il Los Santos Police Department apre le selezioni per nuovi cadetti.
+      Compila il modulo e attendi risposta dallo staff.
+    </p>
+  </div>
+</section>
+
+<section class="section requirements">
+  <h2>Requisiti</h2>
+  <div class="grid">
+    <div class="box">Età OOC minima consigliata: 16+</div>
+    <div class="box">Microfono funzionante</div>
+    <div class="box">Serietà in RP</div>
+    <div class="box">Buona disponibilità settimanale</div>
+  </div>
+</section>
+
+<section id="candidatura" class="section form-section">
+  <h2>Modulo candidatura</h2>
+
+  <form id="applyForm">
+    <input id="nomeIC" type="text" placeholder="Nome e cognome IC" required />
+    <input id="discord" type="text" placeholder="Discord" required />
+    <input id="eta" type="number" placeholder="Età OOC" required />
+    <input id="ore" type="text" placeholder="Ore disponibili al giorno" required />
+
+    <textarea id="esperienza" placeholder="Esperienza RP / Polizia" required></textarea>
+    <textarea id="motivo" placeholder="Perché vuoi entrare nella LSPD?" required></textarea>
+    <textarea id="pregiDifetti" placeholder="Pregi e difetti del tuo personaggio" required></textarea>
+
+    <button type="submit">Invia candidatura</button>
+  </form>
+
+  <p id="formStatus"></p>
+</section>
+
+<div id="staffModal" class="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeStaff()">×</button>
+
+    <div id="loginPanel">
+      <h2>Accesso Staff</h2>
+      <input id="staffPassword" type="password" placeholder="Password staff" />
+      <button onclick="staffLogin()">Accedi</button>
+      <p id="loginStatus"></p>
     </div>
-</section>
 
-<section id="candidatura" class="form-section">
-    <h2>Modulo Candidatura LSPD</h2>
+    <div id="staffPanel" class="hidden">
+      <h2>Pannello Staff</h2>
+      <p>Gestione stato bando</p>
 
-    <form id="applyForm">
-        <input type="text" id="nome" placeholder="Nome e cognome IC" required>
-        <input type="text" id="discord" placeholder="Discord es. Thomas#0001" required>
-        <input type="number" id="eta" placeholder="Età OOC" required>
-        <input type="text" id="ore" placeholder="Ore disponibili al giorno" required>
+      <div class="staff-actions">
+        <button onclick="setBando(true)">Apri bando</button>
+        <button onclick="setBando(false)" class="danger">Chiudi bando</button>
+      </div>
 
-        <textarea id="esperienza" placeholder="Hai esperienza in RP o in polizia?" required></textarea>
-        <textarea id="motivo" placeholder="Perché vuoi entrare in LSPD?" required></textarea>
-        <textarea id="punti" placeholder="Punti di forza e debolezza" required></textarea>
-
-        <button type="submit">Invia candidatura</button>
-    </form>
-
-    <p id="status"></p>
-</section>
+      <p class="small">
+        Stato salvato nel browser. Su GitHub Pages non c’è database.
+      </p>
+    </div>
+  </div>
+</div>
 
 <footer>
-    <p>© LSPD Roleplay Department - Server RP</p>
+  © Los Santos Police Department - Roleplay Recruitment Portal
 </footer>
 
 <script src="script.js"></script>
